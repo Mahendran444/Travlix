@@ -29,7 +29,7 @@ class _HometripState extends State<Hometrip> {
               child: Row(
                 children: [
                   Padding(
-                    padding: const EdgeInsets.only(top: 30, left: 20),
+                    padding: const EdgeInsets.only(top: 30,left: 20),
                     child: Text(
                       "Where to?",
                       style: TextStyle(
@@ -40,8 +40,9 @@ class _HometripState extends State<Hometrip> {
                       ),
                     ),
                   ),
+                  Spacer(),
                   Padding(
-                    padding: const EdgeInsets.only(top: 30, left: 165),
+                    padding: const EdgeInsets.only(top: 30,right: 20),
                     child: Icon(
                       Icons.notifications_outlined,
                       color: Colors.white,
@@ -109,36 +110,15 @@ class _HometripState extends State<Hometrip> {
                     ),
                   ],
                 ),
-                SizedBox(width: 90),
-                InkWell(
-                  onTap: () {
-                    showDialog(
-                      context: context,
-                      builder: (build) {
-                        return AlertDialog(
-                          title: Text("Are sure to move Next Screen"),
-                          actions: [
-                            ElevatedButton(
-                              onPressed: () {
-                                Navigator.pop(context);
-                              },
-                              child: Text("Cancel"),
-                            ),
-                            ElevatedButton(
-                              onPressed: () {},
-                              child: Text("Yes"),
-                            ),
-                          ],
-                        );
-                      },
-                    );
-                  },
-                  child: Icon(
-                    Icons.arrow_forward_outlined,
-                    color: Colors.white,
-                    size: 30,
+                Spacer(),
+                  Padding(
+                    padding: const EdgeInsets.only(right: 20),
+                    child: Icon(
+                      Icons.arrow_forward_outlined,
+                      color: Colors.white,
+                      size: 30,
+                    ),
                   ),
-                ),
               ],
             ),
             SizedBox(height: 15),
